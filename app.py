@@ -181,8 +181,47 @@ elif page == "🔎 Predict":
 
 # Settings Page
 elif page == "⚙️ Settings":
-    st.subheader("⚙️ Configuration")
-    st.info("Ensure your PCA-transformed data has 20 features named PC1-PC20 and is scaled using the same scaler used in training.")
+    st.subheader("⚙️ Configuration & System Settings")
+
+    # AI Disclaimer Alert
+    st.markdown("""
+    <div style='background-color: #ffdddd; padding: 15px; border-left: 6px solid #f44336; border-radius: 5px;'>
+        <strong>⚠️ Alert:</strong> This prediction system is powered by AI and machine learning.<br>
+        It may not always produce 100% accurate results. Please use responsibly for educational or assistive purposes.
+    </div>
+    """, unsafe_allow_html=True)
+
+    # System Overview
+    st.markdown("""
+    <div style='padding: 10px; background-color: #222244; border-radius: 10px; margin-top: 20px;'>
+    <h4 style='color: #00ffff;'>📌 Model Input Requirements:</h4>
+    <ul>
+        <li><strong>PCA Components:</strong> 5 features named <code>PC1</code> to <code>PC5</code></li>
+        <li><strong>Preprocessing:</strong> Inputs must be scaled using the same StandardScaler used during training</li>
+        <li><strong>Model:</strong> LightGBM Classifier with class_weight='balanced'</li>
+    </ul>
+
+    <h4 style='color: #00ffff;'>📁 Accepted Input Modes:</h4>
+    <ul>
+        <li>📂 <strong>CSV Upload:</strong> File with columns <code>PC1</code> to <code>PC5</code></li>
+        <li>📝 <strong>Manual Entry:</strong> Form-based numeric input</li>
+    </ul>
+
+    <h4 style='color: #00ffff;'>🔐 Security & Transparency:</h4>
+    <ul>
+        <li>✅ All predictions run on the client-side Streamlit server</li>
+        <li>🧪 Trained with fairness in mind, tested on unseen data</li>
+        <li>🔄 Continuous updates available via GitHub integration</li>
+    </ul>
+
+    <h4 style='color: #00ffff;'>👨‍💻 Developer Contact:</h4>
+    <ul>
+        <li><strong>Venkata Abhinandan Kancharla</strong></li>
+        <li>🌐 <a href='https://abhikancharla.vercel.app' target='_blank' style='color:#00ffcc;'>Visit Portfolio</a></li>
+        <li>🛠️ Share feedback or report bugs through GitHub or website</li>
+    </ul>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Footer
 st.markdown("""
