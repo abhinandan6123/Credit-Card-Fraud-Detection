@@ -124,7 +124,7 @@ elif page == "📊 Dashboard":
 
         # Bar Chart
        value_counts_df = result['Prediction'].value_counts().reset_index()
-value_counts_df.columns = ['Prediction', 'Count']
+       value_counts_df.columns = ['Prediction', 'Count']
 
 fig_bar = px.bar(value_counts_df,
                  x='Prediction', y='Count', color='Prediction',
