@@ -123,10 +123,14 @@ elif page == "📊 Dashboard":
         col3.metric("📊 Fraud %", f"{(result['Prediction'] == 'Fraud').mean()*100:.2f}%")
 
         # Bar Chart
-        fig_bar = px.bar(result['Prediction'].value_counts().reset_index(),
-                         x='index', y='Prediction', color='index',
-                         title="Fraud vs Non-Fraud Transactions",
-                         labels={'index': 'Prediction', 'Prediction': 'Count'})
+       value_counts_df = result['Prediction'].value_counts().reset_index()
+value_counts_df.columns = ['Prediction', 'Count']
+
+fig_bar = px.bar(value_counts_df,
+                 x='Prediction', y='Count', color='Prediction',
+                 title="Fraud vs Non-Fraud Transactions",
+                 labels={'Prediction': 'Prediction', 'Count': 'Count'})
+
         st.plotly_chart(fig_bar, use_container_width=True)
 
         # Fraud Probability Histogram
