@@ -1,14 +1,33 @@
 # Credit-Card-Fraud-Detection
-
-Perfect! Since your PCA features are now meaningful and user-facing (`Transaction Velocity`, `Spending Diversity Index`, etc.), and you've done full-cycle work from **EDA → Deployment**, here's your **refined and impactful README.md** tailored exactly to that:
-
----
-
-### 📄 `README.md` — *AK Detectors | Credit Card Fraud Detection Portal*
+### 📄 `` — *AK Detectors | Credit Card Fraud Detection Portal*
 
 **🚀 Powered by PCA + LightGBM | Deployed on Render | Full ML Pipeline**
 
+> **An intelligent AI-based system to detect fraudulent credit card transactions using PCA-driven features and LightGBM.**  
+> ⚠️ This system is AI-generated and intended for demo/educational use only.
+
+---
+
+### 📍 Live Demo:
+🔗 **[Access Deployed App on Render →](https://credit-card-fraud-detection-nxs3.onrender.com/)**
+---
+
+
+
+
+
 ````markdown
+
+# 🚀 Project Overview
+
+This end-to-end credit card fraud detection system includes:
+
+- ✅ Data cleaning & preprocessing
+- 📊 PCA feature transformation with human-readable labels
+- 🤖 ML model training (LightGBM)
+- 💾 Model saving and joblib handling
+- 🌐 Streamlit-based fraud detection dashboard
+- 🧭 Deployed on **Render.com** for global accessibili
 # 💳 AK Detectors | Credit Card Fraud Detection Portal 🚀
 
 <p align="center">
@@ -24,17 +43,20 @@ Perfect! Since your PCA features are now meaningful and user-facing (`Transactio
 
 ---
 
-## 🧠 Tech Stack
-
-- **Python**, **Pandas**, **NumPy**
-- **EDA & Feature Engineering**: Seaborn, Matplotlib
-- **ML Model**: `LightGBMClassifier`
-- **Dimensionality Reduction**: PCA (5 business-centric features)
-- **Web App**: Streamlit + Plotly Dashboards
-- **Deployment**: Render.com
-
 ---
 
+## 🧠 Technologies Used
+
+| Area                 | Tech Stack |
+|----------------------|------------|
+| Data Handling        | Pandas, NumPy |
+| EDA & Viz            | Seaborn, Matplotlib, Plotly |
+| Model Building       | LightGBMClassifier |
+| Dimensionality Reduction | PCA |
+| Web App              | Streamlit |
+| Deployment           | Render.com |
+
+---
 ## 🧪 ML Pipeline Workflow
 
 ### 🧹 1. Data Cleaning
