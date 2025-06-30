@@ -13,11 +13,61 @@ st.set_page_config(
 )
 
 # Header Title & Footer
+st.markdown(
+    """
+    <style>
+        body {
+            background: linear-gradient(135deg, #f0f4ff, #e0eaff);
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .main-title {
+            font-size: 40px;
+            font-weight: bold;
+            color: #004aad;
+            text-shadow: 1px 1px 2px #00000020;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        .subtitle {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+        hr {
+            border: 1px solid #bbb;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #91c6ff;
+            }
+            to {
+                text-shadow: 0 0 20px #004aad, 0 0 30px #004aad;
+            }
+        }
+    </style>
+    <div style="text-align: center;">
+        <h1 class="main-title">📈 AK Detectors - Credit Card Fraud Detection Portal 💳</h1>
+        <p class="subtitle">
+            by <strong>Venkata Abhinandan Kancharla</strong> • 
+            <a href="https://abhikancharla.vercel.app" target="_blank" style="color:#004aad; text-decoration: none;">
+                🌐 Portfolio
+            </a>
+        </p>
+        <hr>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("""
-    <h1 style='text-align: center;'>📈 AK Detectors - Credit Card Fraud Detection Portal 💳</h1>
-    <p style='text-align: center;'>by <strong>Venkata Abhinandan Kancharla</strong> • <a href='https://abhikancharla.vercel.app' target='_blank'>Portfolio</a></p>
-    <hr style='border: 1px solid #ccc;'>
+    <hr>
+    <p style='text-align: center; font-size: 15px; color: #555;'>
+        © 2025 • <strong>AK Detectors</strong> | Designed by 
+        <a href='https://abhikancharla.vercel.app' target='_blank' style='color: #004aad; text-decoration: none;'>
+            Venkata Abhinandan Kancharla
+        </a>
+    </p>
 """, unsafe_allow_html=True)
+
 
 # Sidebar Navigation
 st.sidebar.title("Navigation")
@@ -37,7 +87,15 @@ model = load_model()
 scaler = load_scaler()
 
 # Input Columns
-pca_features = [f'PC{i}' for i in range(1, 21)]
+pca_features = [
+    'Transaction Velocity',
+    'Spending Diversity Index',
+    'Merchant Trust Score',
+    'Customer Risk Profile',
+    'Geo-Activity Variance'
+]
+
+
 
 # Home Page
 if page == "🏠 Home":
